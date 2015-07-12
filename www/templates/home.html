@@ -1,5 +1,10 @@
 <ion-view title="{{ navbarTitle }}">
     <ion-content padding="true">
-        <h2>Home Page</h2>
+
+        <div class="button-bar">
+            <div class="button button-assertive" ng-click="setActiveLine('red')" ng-class="{'button-outline': !isActiveLine('red')}">Red</div>
+            <div class="button button-balanced" ng-click="setActiveLine('green')" ng-class="{'button-outline': !isActiveLine('green')}">Green</div>
+        </div>
+
     </ion-content>
 </ion-view>

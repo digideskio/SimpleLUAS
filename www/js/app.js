@@ -18,7 +18,8 @@ angular.module('simpleluas', ['ionic', 'simpleluas.controllers'])
     });
 
     // Let's set up some application defaults here.
-    $rootScope.navbarTitle = 'SimpleLUAS';
+    $rootScope.navbarTitle       = 'SimpleLUAS';
+    $rootScope.defaultActiveLine = 'red';
 }])
 
 .config(['$stateProvider', '$urlRouterProvider', function($stateProvider, $urlRouterProvider) {
