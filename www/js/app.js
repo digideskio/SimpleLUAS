@@ -5,7 +5,7 @@
 // the 2nd parameter is an array of 'requires'
 angular.module('simpleluas', ['ionic', 'simpleluas.controllers'])
 
-.run(['$ionicPlatform', function($ionicPlatform) {
+.run(['$rootScope', '$ionicPlatform', function($rootScope, $ionicPlatform) {
     $ionicPlatform.ready(function() {
         // Hide the accessory bar by default (remove this to show the accessory bar above the keyboard
         // for form inputs)
@@ -16,13 +16,16 @@ angular.module('simpleluas', ['ionic', 'simpleluas.controllers'])
             StatusBar.styleDefault();
         }
     });
+
+    // Let's set up some application defaults here.
+    $rootScope.navbarTitle = 'SimpleLUAS';
 }])
 
 .config(['$stateProvider', '$urlRouterProvider', function($stateProvider, $urlRouterProvider) {
     $stateProvider.state('home', {
         url: '/home',
         controller: 'HomeCtrl',
-        templateUrl: 'templates/home.html' 
+        templateUrl: 'templates/home.html'
     });
 
     $urlRouterProvider.otherwise('/home');
