@@ -1,1 +1,13 @@
-/* Empty. Add your own CSS if you like */
+.line-select .button:last-child {
+  border-left: none; }
+
+.station-select-wrapper {
+  margin-top: 10px; }
+  .station-select-wrapper .item-select {
+    padding: 0; }
+    .station-select-wrapper .item-select select {
+      direction: ltr;
+      max-width: 100%;
+      padding: 10px 48px 12px 10px;
+      position: relative;
+      width: 100%; }

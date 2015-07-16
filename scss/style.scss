@@ -1,0 +1,22 @@
+.line-select {
+    .button:last-child {
+        border-left: none;
+    }
+}
+
+
+.station-select-wrapper {
+    margin-top: 10px;
+
+    .item-select {
+        padding: 0;
+
+        select {
+            direction: ltr;
+            max-width: 100%;
+            padding: 10px 48px 12px 10px;
+            position: relative;
+            width: 100%;
+        }
+    }
+}
