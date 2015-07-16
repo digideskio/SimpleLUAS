@@ -1,9 +1,15 @@
 <ion-view title="{{ navbarTitle }}">
     <ion-content padding="true">
 
-        <div class="button-bar">
+        <div class="button-bar line-select">
             <div class="button button-assertive" ng-click="setActiveLine('red')" ng-class="{'button-outline': !isActiveLine('red')}">Red</div>
             <div class="button button-balanced" ng-click="setActiveLine('green')" ng-class="{'button-outline': !isActiveLine('green')}">Green</div>
+        </div>
+
+        <div class="list station-select-wrapper">
+            <label class="item item-input item-select">
+                <select ng-model="selectedStation" ng-options="station.displayName for station in stations track by station.shortName | filter:{line: 'Red'}"></select>
+            </label>
         </div>
 
     </ion-content>
